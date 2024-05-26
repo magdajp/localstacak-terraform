@@ -9,6 +9,7 @@ terraform {
 
 resource "aws_s3_bucket" "images-bucket" {
   bucket = var.images-bucket_name
+  force_destroy = true
 }
 
 resource "aws_s3_object" "image-a" {
