@@ -13,7 +13,7 @@ variable "image-a-filename" {
 variable "image-a-path" {
   description = "Path to image-a"
   type        = string
-  default     = "path/to/image-a.png"
+  default     = "images/image-a.png"
 }
 
 variable "image-a-file-type" {
