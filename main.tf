@@ -12,9 +12,9 @@ resource "aws_s3_bucket" "images-bucket" {
   force_destroy = true
 }
 
-resource "aws_s3_object" "image-a" {
+resource "aws_s3_object" "image" {
   bucket       = aws_s3_bucket.images-bucket.id
-  key          = var.image-a-filename
-  source       = var.image-a-path
-  content_type = var.image-a-file-type
+  key          = var.image-filename
+  source       = var.image-path
+  content_type = var.image-content-type
 }

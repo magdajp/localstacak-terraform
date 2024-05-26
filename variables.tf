@@ -4,20 +4,17 @@ variable "images-bucket_name" {
   default     = "images-bucket"
 }
 
-variable "image-a-filename" {
-  description = "Image-a filename"
+variable "image-filename" {
+  description = "Image file name with extension e.g example.png"
   type        = string
-  default     = "image-a.png"
 }
 
-variable "image-a-path" {
-  description = "Path to image-a"
+variable "image-path" {
+  description = "Path to the image file"
   type        = string
-  default     = "images/image-a.png"
 }
 
-variable "image-a-file-type" {
-  description = "Image-a file type"
+variable "image-content-type" {
+  description = "Image MIME type e.g. image/png"
   type        = string
-  default     = "image/png"
 }
