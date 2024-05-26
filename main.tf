@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "images-bucket" {
   bucket = var.images-bucket_name
 }
 
-resource "aws_s3_bucket_object" "image-a" {
+resource "aws_s3_object" "image-a" {
   bucket       = aws_s3_bucket.images-bucket.id
   key          = var.image-a-filename
   source       = var.image-a-path
