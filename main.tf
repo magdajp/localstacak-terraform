@@ -5,3 +5,7 @@ terraform {
     }
   }
 }
+
+resource "aws_s3_bucket" "images-bucket" {
+  bucket = var.images-bucket_name
+}
