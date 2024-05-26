@@ -13,8 +13,9 @@ resource "aws_s3_bucket" "images-bucket" {
 }
 
 resource "aws_s3_object" "image" {
+  for_each    = { for idx, image in var.images : idx => image }
   bucket       = aws_s3_bucket.images-bucket.id
-  key          = var.image-filename
-  source       = var.image-path
-  content_type = var.image-content-type
+  key          = each.value.image-filename
+  source       = each.value.image-path
+  content_type = each.value.image-content-type
 }

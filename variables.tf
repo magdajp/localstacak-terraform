@@ -4,17 +4,11 @@ variable "images-bucket_name" {
   default     = "images-bucket"
 }
 
-variable "image-filename" {
-  description = "Image file name with extension e.g example.png"
-  type        = string
-}
-
-variable "image-path" {
-  description = "Path to the image file"
-  type        = string
-}
-
-variable "image-content-type" {
-  description = "Image MIME type e.g. image/png"
-  type        = string
+variable "images" {
+  description = "List of images objects to upload e.g.: \n{\n\timage-filename:example.png\n\timage-path: examples/example.png\n\timage-content-type:image/png\n}"
+  type        = list(object({
+    image-path         = string
+    image-filename     = string
+    image-content-type = string
+  }))
 }
