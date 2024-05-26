@@ -6,7 +6,6 @@ services:
     image: localstack/localstack:stable
     ports:
       - "4566:4566"
-      -
     environment:
       - SERVICES=s3
       - DEBUG=0
